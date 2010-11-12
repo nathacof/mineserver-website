@@ -12,9 +12,7 @@ Container::instance()->set_implementation('Session_IdentifierInterface', 'Sessio
 
 Container::instance()->set_scope('StorageInterface', 'singleton');
 Container::instance('page_cache')->set_scope('StorageInterface', 'singleton');
-Container::instance()->set_factory('storage_memcache_servers', function(){ return array(array('host' => '127.0.0.1', 'port' => 11211)); });
-Container::instance()->set_default('Storage_Memcache', '__construct', 'servers', '{{component:storage_memcache_servers}}');
-Container::instance()->set_implementation('StorageInterface', 'Storage_Memcache');
+Container::instance()->set_implementation('StorageInterface', 'Storage_Array');
 
 Container::instance()->set_implementation('Config_ReaderInterface', 'Config_Reader_PHP');
 Container::instance()->set_implementation('Config_WriterInterface', 'Config_Writer_PHP');
