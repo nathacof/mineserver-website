@@ -3,7 +3,9 @@
 {% block content %}
 <div id="main-outer">
   <div id="main-inner">
-{{ txt }}
+{% for post in posts %}
+{{ post.name }}
+{% endfor %}
   </div>
 </div>
 {% endblock %}

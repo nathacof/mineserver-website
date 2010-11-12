@@ -10,8 +10,8 @@ class Model_News_Post {
   protected $time;
   /** @OneToOne(targetEntity="Model_Auth_User") */
   protected $user;
-  /** @ManyToOne(targetEntity="Model_News_Category") */
-  protected $category;
+  /** @OneToMany(targetEntity="Model_News_CategoryInstance", mappedBy="post") */
+  protected $categoryinstances = array();
   /** @OneToMany(targetEntity="Model_News_TagInstance", mappedBy="post") */
   protected $taginstances = array();
 
@@ -23,8 +23,7 @@ class Model_News_Post {
   public function set_time($time) { if (is_integer($time)) { $this->time = $time; return true; } return false; }
   public function get_user() { return $this->user; }
   public function set_user($user) { if (is_a('Model_Auth_User', $user)) { $this->user = $user; return true; } return false; }
-  public function get_category() { return $this->category; }
-  public function set_category($category) { if (is_a('Model_News_Category', $category)) { $this->category = $category; return true; } return false; }
+  public function get_categoryinstances() { return $this->categoryinstances; }
   public function get_taginstances() { return $this->taginstances; }
 }
 
