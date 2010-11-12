@@ -1,0 +1,141 @@
+body, html {
+  background-color: #DDDDDD;
+  font-family: 'Lucida Grande', Verdana, 'Lucida Sans Unicode', Arial, sans-serif;
+  font-size: 11px;
+  align: baseline;
+}
+
+body {
+  margin: 0px;
+}
+
+#wrapper {
+  width: 1000px;
+  margin: auto;
+}
+
+#header {
+  padding-top: 4px;
+}
+
+#nav {
+  background-color: #113866;
+  border-style: none;
+  border-radius: 8px 8px 0px 0px;
+  -moz-border-radius: 8px 8px 0px 0px;
+  -webkit-border-radius: 8px 8px 0px 0px;
+  border-bottom-style: solid;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 5px;
+  margin-bottom: 8px;
+}
+
+#nav > ul {
+  list-style: none;
+  float: right;
+  margin: 0px;
+  padding: 0px;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+#nav > ul > li {
+  float: left;
+  margin-left: 6px;
+  background-color: #4070A9;
+  color: #FFFFFF;
+  font-weight: bold;
+  border-radius: 5px 5px 0px 0px;
+  -moz-border-radius: 5px 5px 0px 0px;
+  -webkit-border-radius: 5px 5px 0px 0px;
+}
+
+#nav > ul > li:hover, #nav > ul > li.nav-active {
+  background-color: #606060;
+}
+
+#nav > ul > li > a:link > div, #nav > ul > li > a:visited > div {
+  padding: 8px 12px;
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+
+#nav > ul > li > a:hover > div {
+  text-decoration: none;
+}
+
+#main {
+}
+
+#sidebar {
+  float: left;
+  background-color: #FFFFFF;
+  padding: 0px;
+  width: 240px;
+}
+
+.menu {
+  list-style: none;
+  margin: 10px;
+  padding: 0px;
+}
+
+.menu > li {
+  margin: 6px 0px;
+}
+
+.menu > li div {
+  display: inline-block;
+  padding: 5px 8px;
+}
+
+.menu > li > a > div {
+  background-color: #4070A9;
+  color: #FFFFFF;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #003069;
+}
+
+.menu > li > a:hover > div, .menu > li.menu-active > a > div {
+  background-color: #606060;
+  border-color: #202020;
+}
+
+#content {
+  margin-left: 250px;
+}
+
+.content-box {
+  background-color: #FFFFFF;
+  margin-bottom: 8px;
+}
+
+.content-box-header {
+  background-color: #3060A0;
+  color: #FFFFFF;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 8px;
+}
+
+.content-box-content {
+  padding: 16px;
+}
+
+#footer {
+  background-color: #404040;
+  color: #FFFFFF;
+  padding: 15px;
+  text-align: right;
+  border-radius: 0px 0px 10px 10px;
+  -moz-border-radius: 0px 0px 10px 10px;
+  -webkit-border-radius: 0px 0px 10px 10px;
+}
+
+.clear {
+  clear: both;
+}

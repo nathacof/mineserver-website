@@ -1,0 +1,120 @@
+body {
+  background-color: #DDDDDD;
+  background-image: url('img/back.png');
+  margin: 0px;
+  font-family: Verdana;
+  font-size: 12px;
+}
+
+img {
+  border: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+#top-outer {
+  width: 800px;
+  margin: 8px auto;
+}
+
+#nav {
+  float: right;
+}
+
+#nav li {
+  list-style: none;
+  float: left;
+  margin-left: 0.5em;
+}
+
+#splash-outer {
+  background-color: #C0C0C0;
+}
+
+#splash-inner {
+  width: 800px;
+  margin: auto;
+}
+
+#splash-nav-previous {
+  float: left;
+}
+
+#splash-nav-next {
+  float: right;
+}
+
+#splash-container {
+  width: 800px;
+  height: 212px;
+  overflow: hidden;
+  position: relative;
+}
+
+#splash-slides {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.splash-slide {
+  position: absolute;
+  top: 0px;
+  width: 800px;
+  padding: 6px 0px;
+}
+
+.splash-slide-image {
+  float: left;
+  margin: 0px 8px 0px 0px;
+}
+
+#main-outer {
+}
+
+#main-inner {
+  width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+#version {
+  margin: 10px 0px;
+  padding: 4px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #C0C0C0;
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  text-align: left;
+}
+
+#downloads {
+  margin: 10px;
+}
+
+#downloads > span {
+  display: inline-block;
+}
+
+#downloads > span > a {
+  text-decoration: none;
+}
+
+#footer-outer {
+  background-color: #C0C0C0;
+}
+
+#footer-inner {
+  width: 800px;
+  margin: auto;
+  padding: 6px;
+  text-align: center;
+}
+
+.clear {
+  clear: both;
+}

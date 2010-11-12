@@ -1,0 +1,48 @@
+{% extends 'front/frame.html' %}
+
+{% block content %}
+{% request 'pagelet/common/splash' %}
+<div id="main-outer">
+  <div id="main-inner">
+    <div id="version">
+      <div>
+        Latest version: <a href="/changelog">0.0.1-alpha</a>
+      </div>
+      <div>
+        Release notes: ...
+      </div>
+    </div>
+    <div id="downloads">
+      <span>
+        <a href="/download#linux">
+          <img src="/img/front/os/linux.png" height="150px" width="150px">
+          <br>
+          Download for Linux
+        </a>
+      </span>
+      <span>
+        <a href="/download#windows">
+          <img src="/img/front/os/windows.png" height="150px" width="150px">
+          <br>
+          Download for Windows
+        </a>
+      </span>
+      <span>
+        <a href="/download#osx">
+          <img src="/img/front/os/osx.png" height="150px" width="150px">
+          <br>
+          Download for MacOS X
+        </a>
+      </span>
+      <span>
+        <a href="/download#source">
+          <img src="/img/front/os/other.png" height="150px" width="150px">
+          <br>
+          Download source
+        </a>
+      </span>
+      <div class="clear"></div>
+    </div>
+  </div>
+</div>
+{% endblock %}

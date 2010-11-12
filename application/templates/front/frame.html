@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mineserver - {{ global.title.section|e }} - {{ global.title.description|e }}</title>
+{% for url in global.assets.css %}
+<link type="text/css" rel="stylesheet" href="{{ url|e }}">
+{% endfor %}
+{% for url in global.assets.js %}
+<script type="text/javascript" src="{{ url|e }}"></script>
+{% endfor %}
+</head>
+<body>
+<div id="wrapper">
+{% request 'pagelet/common/header' %}
+{% block content %}{% endblock %}
+{% request 'pagelet/common/footer' %}
+</div>
+</body>
+</html>
