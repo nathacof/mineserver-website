@@ -1,0 +1,9 @@
+[submodule "system"]
+	path = system
+	url = git://github.com/elasticphp/elastic-core.git
+[submodule "modules/doctrine"]
+	path = modules/doctrine
+	url = git://github.com/elasticphp/elastic-module-doctrine.git
+[submodule "modules/twig"]
+	path = modules/twig
+	url = git://github.com/elasticphp/elastic-module-twig.git
