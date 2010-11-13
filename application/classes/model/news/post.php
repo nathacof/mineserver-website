@@ -10,10 +10,18 @@ class Model_News_Post {
   protected $time;
   /** @OneToOne(targetEntity="Model_Auth_User") */
   protected $user;
-  /** @OneToMany(targetEntity="Model_News_CategoryInstance", mappedBy="post") */
-  protected $categoryinstances = array();
-  /** @OneToMany(targetEntity="Model_News_TagInstance", mappedBy="post") */
-  protected $taginstances = array();
+  /** @Column(type="string", length="65535") */
+  protected $content;
+  /**
+  * @ManyToMany(targetEntity="Model_News_Category", inversedBy="posts")
+  * @JoinTable(name="news_post_category", joinColumns={@JoinColumn(name="category_id", referencedColumnName="id")}, inverseJoinColumns={@JoinColumn(name="post_id", referencedColumnName="id")})
+  */
+  protected $categories = array();
+  /**
+  * @ManyToMany(targetEntity="Model_News_Tag", inversedBy="posts")
+  * @JoinTable(name="news_post_tag", joinColumns={@JoinColumn(name="tag_id", referencedColumnName="id")}, inverseJoinColumns={@JoinColumn(name="post_id", referencedColumnName="id")})
+  */
+  protected $tags = array();
 
   public function get_id() { return $this->id; }
   public function set_id($id) { if (is_integer($id)) { $this->id = $id; return true; } return false; }
@@ -23,8 +31,10 @@ class Model_News_Post {
   public function set_time($time) { if (is_integer($time)) { $this->time = $time; return true; } return false; }
   public function get_user() { return $this->user; }
   public function set_user($user) { if (is_a('Model_Auth_User', $user)) { $this->user = $user; return true; } return false; }
-  public function get_categoryinstances() { return $this->categoryinstances; }
-  public function get_taginstances() { return $this->taginstances; }
+  public function get_content() { return $this->content; }
+  public function set_content($content) { if (is_string($content)) { $this->content = $content; return true; } return false; }
+  public function get_categories() { return $this->categories; }
+  public function get_tags() { return $this->tags; }
 }
 
 ?>
