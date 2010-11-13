@@ -2,8 +2,6 @@
 
 error_reporting(E_ALL | E_STRICT);
 
-header('Content-Type: text/plain');
-
 // Constants
 define('DS', DIRECTORY_SEPARATOR);
 define('LF', PHP_EOL);
@@ -17,10 +15,6 @@ $sys_dir = 'system';
 $mod_dir = 'modules';
 $app_dir = 'application';
 $www_dir = 'www';
-
-// Set this to "RLS" when you're in production, or make some kind of conditional thing.
-// Or not. I don't care. I'm not judging you, man.
-define('APP_ENV', 'DBG');
 
 // Make sure your $*_dir settings check out
 if (is_dir(DOC_ROOT.DS.$sys_dir)) { define('SYS_ROOT', realpath(DOC_ROOT.DS.$sys_dir)); }
@@ -44,6 +38,8 @@ require SYS_ROOT.DS.'classes'.DS.'loader'.PHP_EXT;
 require SYS_ROOT.DS.'classes'.DS.'container'.PHP_EXT;
 // Create the default loader. Can be accessed later by using Loader::instance('default') again.
 Loader::instance('default')->register();
+// Include the initialisation file for the core
+require SYS_ROOT.DS.'init'.PHP_EXT;
 
 require APP_ROOT.DS.'bootstrap'.PHP_EXT;
 
