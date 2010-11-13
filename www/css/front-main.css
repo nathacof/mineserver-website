@@ -118,3 +118,57 @@ a:hover {
 .clear {
   clear: both;
 }
+
+/*********************/
+/* Begin news styles */
+/*********************/
+
+#news-sidebar {
+  float: right;
+  width: 200px;
+}
+
+.news-sidebar-element {
+  list-style: none;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #EEEEEE;
+  margin-bottom: 10px;
+}
+
+.news-sidebar-element-header, .news-sidebar-element-content {
+  padding: 3px 5px;  
+}
+
+.news-sidebar-element-header {
+  background-color: #EEEEEE;
+}
+
+#news-posts {
+  margin-right: 210px;
+}
+
+.news-post {
+  text-align: left;
+  margin: 5px 0px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #EEEEEE;
+}
+
+.news-post-header, .news-post-footer {
+  padding: 3px 5px;  
+  background-color: #EEEEEE;
+}
+
+.news-post-header-time {
+  float: right;
+}
+
+.news-post-content {
+  padding: 3px 5px;
+}
+
+/*******************/
+/* End news styles */
+/*******************/

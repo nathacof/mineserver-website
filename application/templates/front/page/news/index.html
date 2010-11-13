@@ -3,9 +3,43 @@
 {% block content %}
 <div id="main-outer">
   <div id="main-inner">
+    <div id="news-sidebar">
+      <div class="news-sidebar-element">
+        <div class="news-sidebar-element-header">Sidebar element 1</div>
+        <div class="news-sidebar-element-content">
+          Content would go here...
+        </div>
+      </div>
+      <div class="news-sidebar-element">
+        <div class="news-sidebar-element-header">Sidebar element 2</div>
+        <div class="news-sidebar-element-content">
+          Content would go here...
+        </div>
+      </div>
+      <div class="news-sidebar-element">
+        <div class="news-sidebar-element-header">Sidebar element 3</div>
+        <div class="news-sidebar-element-content">
+          Content would go here...
+        </div>
+      </div>
+    </div>
+    <div id="news-posts">
 {% for post in posts %}
-{{ post.name }}
+      <div class="news-post" id="news-post-{{ post.id }}">
+        <div class="news-post-header">
+          <span class="news-post-header-name"><a href="#">{{ post.name }}</a> by <a href="#">{{ post.user.name }}</a></span>
+          <span class="news-post-header-time">@ {{ post.time }}</span>
+        </div>
+        <div class="news-post-content">
+{{ post.content }}
+        </div>
+        <div class="news-post-footer">
+          <span class="news-post-footer-comments">0 <a href="#">comments</a> and 0 <a href="#">trackbacks</a></span>
+        </div>
+      </div>
 {% endfor %}
+    </div>
+    <div class="clear"></div>
   </div>
 </div>
 {% endblock %}
