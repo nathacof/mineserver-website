@@ -188,7 +188,7 @@ a:hover {
   color: #707070;
 }
 
-/* News tags module */
+/* Twitter module */
 
 .sidebar-module-twitter {
   margin: 0px;
@@ -209,6 +209,12 @@ a:hover {
 
 .sidebar-module-twitter-time a:link, .sidebar-module-twitter-time a:visited {
   color: #707070;
+}
+
+/* Search module */
+
+.sidebar-module-search {
+  text-align: center;
 }
 
 /**********************/

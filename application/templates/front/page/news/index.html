@@ -4,56 +4,9 @@
 <div id="main-outer">
   <div id="main-inner">
     <div id="sidebar">
-      <div class="sidebar-module">
-        <div class="sidebar-module-header">Latest News</div>
-        <div class="sidebar-module-content">
-          <ul class="sidebar-module-news-posts">
-            <li>
-              <a href="#">Lorem Ipsum</a>
-              <span class="sidebar-module-news-posts-name"><a href="#">deoxxa</a></span>
-            </li>
-            <li>
-              <a href="#">Dolor Sit Amet</a>
-              <span class="sidebar-module-news-posts-name"><a href="#">fador</a></span>
-            </li>
-            <li>
-              <a href="#">Consectetur Adipisicing</a>
-              <span class="sidebar-module-news-posts-name"><a href="#">nredor</a></span>
-            </li>
-            <li>
-              <a href="#">Elit</a>
-              <span class="sidebar-module-news-posts-name"><a href="#">deoxxa</a></span>
-            </li>
-            <li>
-              <a href="#">Sed do Eiusmod Tempor</a>
-              <span class="sidebar-module-news-posts-name"><a href="#">fador</a></span>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="sidebar-module">
-        <div class="sidebar-module-header">Twitter Activity</div>
-        <div class="sidebar-module-content">
-          <ul class="sidebar-module-twitter">
-            <li>
-              <a href="#">mineserver</a>
-              <span class="sidebar-module-twitter-time"><a href="#">5 minutes ago</a></span>
-              <br>
-[mineserver] http://bit.ly/bBKiF6 Nredor - This time fixed give command for real (Though could not test it..)
-            </li>
-            <li>
-              <a href="#">mineserver</a> <span class="sidebar-module-twitter-time"><a href="#">12 hours ago</a></span>
-              <br>
-[mineserver] http://bit.ly/dqfmex Fador - Water physics almost working
-            </li>
-            <li>
-              <a href="#">mineserver</a> <span class="sidebar-module-twitter-time"><a href="#">3 days ago</a></span>
-              <br>
-[mineserver] http://bit.ly/cadhly Fador - Fixed a warning and chest data is now saved with chunks
-            </li>
-          </ul>
-        </div>
-      </div>
+{% request 'pagelet/sidebar/search' %}
+{% request 'pagelet/sidebar/newsposts' %}
+{% request 'pagelet/sidebar/twitter' %}
     </div>
     <div id="content">
       <div id="news-posts">

@@ -1,0 +1,13 @@
+      <div class="sidebar-module">
+        <div class="sidebar-module-header">Latest News</div>
+        <div class="sidebar-module-content">
+          <ul class="sidebar-module-news-posts">
+{% for post in posts %}
+            <li>
+              <a href="/news/show/{{ post.post_id }}">{{ post.post_name }}</a>
+              <span class="sidebar-module-news-posts-name"><a href="/user/show/{{ post.user_id }}">{{ post.user_name }}</a></span>
+            </li>
+{% endfor %}
+          </ul>
+        </div>
+      </div>
